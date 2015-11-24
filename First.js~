@@ -18,7 +18,7 @@ console.log("re");
 	//res.sendFile('html5.html');
 }); 
 
-app.post('/login.html',urlencodedParser,function(req,res){
+app.get('/login.html',urlencodedParser,function(req,res){
 console.log("re");
 	
 	 
@@ -43,7 +43,7 @@ console.log("re");
               //req.sendFile('index.html');
                 if(req.body){
                   console.log("h koi")
-                  MongoClient.connect('mongodb://127.0.0.1:27023/blog_users', function(err, db) {
+                  MongoClient.connect('mongodb://127.0.0.1:27013/blog_users', function(err, db) {
                       var x =  db.collection('users');
                       x.find({},function(err,res){
                         console.log("i am here"+res);
